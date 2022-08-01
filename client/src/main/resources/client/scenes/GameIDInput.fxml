@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+          prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.GameIDInputController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="120.0" prefWidth="205.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="60.0" prefWidth="90.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="250.0" prefWidth="375.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="250.0" prefWidth="375.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="30.0" prefWidth="45.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="45.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="120.0" prefWidth="180.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="200.0" minHeight="100.0" prefHeight="150.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="180.0" minHeight="90.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="230.0" minHeight="90.0" prefHeight="160.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="240.0" minHeight="110.0" prefHeight="175.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Label alignment="CENTER" prefHeight="111.0" prefWidth="630.0" style="-fx-font-size: 65;"
+               text="Enter the game ID" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.halignment="CENTER"
+               GridPane.rowIndex="1"/>
+        <Button onMousePressed="#clickSound" alignment="CENTER" mnemonicParsing="false"
+                onAction="#showGamemodeSelection" prefHeight="60.0" prefWidth="200.0" style="-fx-font-size: 35;"
+                text="Back" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label fx:id="errorExist" alignment="CENTER" prefHeight="63.0" prefWidth="646.0" style="-fx-font-size: 35;"
+               text="This game ID does not exist." visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#join" prefHeight="1000.0"
+                prefWidth="1000.0" style="-fx-font-size: 30;" text="Join" GridPane.columnIndex="6"
+                GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+        <TextField fx:id="gameIDInput" alignment="CENTER" prefHeight="1000.0" prefWidth="1000.0"
+                   style="-fx-font-size: 30;" text="Game ID" GridPane.columnIndex="2" GridPane.columnSpan="3"
+                   GridPane.rowIndex="3"/>
+        <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT" onMouseClicked="#clearField"
+                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT"
+                   GridPane.rowIndex="3">
+            <image>
+                <Image url="@client/scenes/Images/Icons/close (1).png"/>
+            </image>
+            <GridPane.margin>
+                <Insets right="25.0"/>
+            </GridPane.margin>
+        </ImageView>
+        <Label fx:id="errorNumber" alignment="CENTER" prefHeight="63.0" prefWidth="646.0" style="-fx-font-size: 35;"
+               text="Please enter a number." visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2"
+               GridPane.rowIndex="5"/>
+        <Label fx:id="errorStarted" alignment="CENTER" prefHeight="63.0" prefWidth="646.0" style="-fx-font-size: 33;"
+               text="This game has already started." visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+    </children>
+</GridPane>

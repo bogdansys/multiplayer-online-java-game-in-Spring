@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+          prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SinglePlayerNameInputController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="120.0" prefWidth="205.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="60.0" prefWidth="90.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="250.0" prefWidth="375.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="250.0" prefWidth="375.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="30.0" prefWidth="45.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="45.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="120.0" prefWidth="180.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="200.0" minHeight="100.0" prefHeight="150.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="180.0" minHeight="90.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="230.0" minHeight="90.0" prefHeight="160.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="210.0" minHeight="80.0" prefHeight="145.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Label alignment="CENTER" prefHeight="111.0" prefWidth="630.0" style="-fx-font-size: 65;" text="Enter your name"
+               GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#showGamemodeSelection"
+                onMousePressed="#clickSound" prefHeight="60.0" prefWidth="200.0" style="-fx-font-size: 35;" text="Back"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#startSinglePlayer" onMousePressed="#clickSound" prefHeight="1000.0"
+                prefWidth="1000.0" style="-fx-font-size: 30;" text="Continue" GridPane.columnIndex="6"
+                GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+        <TextField fx:id="enterNameText" alignment="CENTER" prefHeight="1000.0" prefWidth="1000.0"
+                   style="-fx-font-size: 30;" text="Name" GridPane.columnIndex="2" GridPane.columnSpan="3"
+                   GridPane.rowIndex="3"/>
+        <ImageView fitHeight="30.0" fitWidth="30.0" nodeOrientation="INHERIT" onMouseClicked="#clearField"
+                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="RIGHT"
+                   GridPane.rowIndex="3">
+            <image>
+                <Image url="@client/scenes/Images/Icons/close%20(1).png"/>
+            </image>
+            <GridPane.margin>
+                <Insets right="25.0"/>
+            </GridPane.margin>
+        </ImageView>
+        <Label fx:id="labelOneWord" alignment="CENTER" prefHeight="63.0" prefWidth="646.0" style="-fx-font-size: 30;"
+               text="Please use one word." visible="false" GridPane.columnIndex="3" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="5"/>
+    </children>
+</GridPane>

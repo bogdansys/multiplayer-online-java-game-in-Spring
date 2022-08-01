@@ -1,0 +1,109 @@
+Q&A
+Q: How many players do we need to support?
+A: At least your whole group, so in theory an infinite number
+
+Q: Do we need an authentication system to store player’s data?
+A: No.
+
+Q: Are all questions multiple choice or do you need open-answer questions?
+A: Ideally, all should be multiple choice because they’re easier to validate
+There could/should also be an ‘estimate’ question that is open, and you get points for how close you are to the exact answer
+
+Q: How does the starting button work / who starts the game?
+A: Anybody could, as soon as the button is pressed by someone, the game starts for everyone
+
+Q: How many options should a multiple choice question have?
+A: 3
+
+Q: How many questions make up a game?
+A: 20 is a good number
+
+Q: Do you have design preferences or are we free to choose?
+A: You are free to design your project however you wish
+
+Q: What kind of information should we store in the database?
+A: It boils down to activity information, so which cards or activities exist
+	> Activity – Power Usage
+
+Q: Should all questions be answered at the same time (synchronously)?
+A: It should be synchronous, each player gets a time limit in which to answer the question and the answer is revealed when the time is up
+
+Q: What happens if somebody joins later?
+A: You should make it so you can’t join once the game has started
+
+Q: Is it correct that there are different features / aspects to the project?
+A: Yes, there are a few basic requirements and you can implement bonus features to get a higher grade
+	Basic requirements:
+	  >Can play solo game
+	  >client/server communication
+	  >leaderboards of past game (should be stored in the database)
+
+Q: What powerups could you implement?
+A: -Remove an incorrect answer
+     -Decrease the time for everyone else
+     -Double your points for a question
+
+Q: Do we have artistic freedom in coming up with powerups?
+A: Yes, but it will make it harder to grade. It is a nice extra to add one or two jokers but make sure to cover all other requested features first
+
+Q: Since the game is synchronous, what happens in the scenario where a time reduction powerup is used?
+A: This is a corner case that you need to handle yourself, for example using two different events for when the time is over and for when the answers are revealed
+
+Q: Do we need to have pictures with the questions?
+A: Ideally, yes, this is one of the easier bonus features
+
+Q: What should happen is a player has internet problems and disconnects?
+A: To keep it simple, the player just drops out and cannot re-enter
+
+Q: Must there be a different host for each multiplayer game or one central host?
+A: The server should be started separately and is used as a central host. All clients talk to one server instance
+
+Q: For the remove-answer joker, how do they work for the estimate question?
+A: Another corner case, you should disable it for this type of question
+
+Q: Could you use more than one joker in the same round?
+A: Yes
+
+Q: Should there be an option for a fixed room size/ closed groups?
+A:  Could be an advanced feature
+
+Q: Should there be predetermined questions or randomly generated statistics?
+A: That would be a nice way to make questions more interesting but it might be difficult 
+	> More interesting would be fixed activities but random selection
+
+Q: Should there be a chat inside the game?
+A: No, just the simple emoji reactions because of the fast-paced nature of the game
+
+Q: Should there be kick function?
+A: It’s not really necessary
+
+Q: What happens if multiple people select the reduce time joker in one round?
+A: Fair game, maybe it should shorten by a percentage of time instead of fixed amount
+
+Q: Do we need to show information about other players, like their points and remaining powerups?
+A: It’s less interesting to show information about other players at all time, you could have an intermediate leaderboard after a certain amount of questions
+
+Q: Should singleplayer leaderboards be stored locally?
+A: It should be stored in the database on the server
+
+Q: Should a player be able to see previous games’ leaderboards?
+A: Yes, just their own games
+
+Q: Should we use metric or imperial system?
+A: metric, duh
+
+Q: Should players be able to give feedback on/rate questions?
+A: Could be nice feature but how would you use the data? Bit out of scope for the OOP project
+
+Q: since we do not have logins, how do we deal with people having the same username?
+A: whoever comes first gets the name and if it’s taken you get a message
+
+Q: Is there a global leaderboard or are there specific leaderboards for each game?
+A: For singleplayer leaderboards it makes sense to have them persist between games to have an all-time leaderboard. For multiplayer games there should be a leaderboard specific for each game. You can have it be persistent in the database but that’s not necessary.
+
+Additional features that would be nice:
+	>See your score at all times
+	>More points awarded for answering faster
+	>Should be able to use jokers after you answer (but before time limit expires)
+	>Some interactivity with emoji reactions 
+	>Show who got the question right

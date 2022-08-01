@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="540.0" prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.GamemodeSelectionController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="100.0" prefWidth="175.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="75.0" prefWidth="112.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1020.0" minWidth="510.0" prefWidth="765.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="75.0" prefWidth="112.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="150.0" prefWidth="225.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="200.0" minHeight="100.0" prefHeight="150.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="160.0" minHeight="80.0" prefHeight="120.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="160.0" minHeight="80.0" prefHeight="120.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="80.0" minHeight="40.0" prefHeight="60.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="160.0" minHeight="80.0" prefHeight="120.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Button onMousePressed="#clickSound" alignment="CENTER" layoutX="10.0" mnemonicParsing="false"
+                onAction="#showMainMenu" prefHeight="60.0" prefWidth="200.0" style="-fx-font-size: 35;" text="Back"
+                GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1"
+                GridPane.valignment="CENTER"/>
+        <Label alignment="CENTER" prefHeight="111.0" prefWidth="659.0" style="-fx-font-size: 70;" text="Select gamemode"
+               GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1"
+               GridPane.valignment="CENTER"/>
+        <Button onMousePressed="#clickSound" alignment="CENTER" mnemonicParsing="false" onAction="#startSingleplayer"
+                prefHeight="1000.0" prefWidth="1000.0" style="-fx-font-size: 50;" text="Singleplayer"
+                GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+        <Button onMousePressed="#clickSound" alignment="CENTER" layoutX="212.0" layoutY="106.0" mnemonicParsing="false"
+                onAction="#joinLobby" prefHeight="1000.0" prefWidth="1000.0" style="-fx-font-size: 50;"
+                text="Join lobby" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="5"/>
+        <Button onMousePressed="#clickSound" alignment="CENTER" layoutX="212.0" layoutY="106.0" mnemonicParsing="false"
+                onAction="#createLobby" prefHeight="1000.0" prefWidth="1000.0" style="-fx-font-size: 50;"
+                text="Create lobby" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="7"/>
+    </children>
+</GridPane>

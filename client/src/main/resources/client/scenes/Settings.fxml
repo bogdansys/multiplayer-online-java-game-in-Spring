@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+          prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SettingsController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="200.0" prefWidth="300.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="25.0" prefWidth="38.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="620.0" minWidth="310.0" prefWidth="465.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="75.0" prefWidth="112.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="150.0" prefWidth="225.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="140.0" minHeight="70.0" prefHeight="105.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="120.0" minHeight="60.0" prefHeight="90.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="180.0" minHeight="90.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="40.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="180.0" minHeight="90.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="40.0" minHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="180.0" minHeight="90.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#showMainMenu" prefHeight="60.0"
+                prefWidth="398.0" style="-fx-font-size: 28;" text="Back to menu" GridPane.columnIndex="1"
+                GridPane.rowIndex="1"/>
+        <Label style="-fx-font-size: 70;" text="Settings" GridPane.columnIndex="4" GridPane.halignment="CENTER"
+               GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#musicOff" prefHeight="1000.0"
+                prefWidth="200.0" style="-fx-background-radius: 20; -fx-font-size: 50;" text="Music"
+                GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#setEmote" prefHeight="1000.0"
+                prefWidth="200.0" style="-fx-background-radius: 20; -fx-font-size: 50;" text="Emotes"
+                GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="7"/>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#sfxOff" prefHeight="1000.0"
+                prefWidth="200.0" style="-fx-background-radius: 20; -fx-font-size: 50;" text="SFX"
+                GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="5"/>
+        <ProgressBar fx:id="pbMusic" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="1000.0"
+                     progress="0.1" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="3"/>
+        <Slider fx:id="sliderMusic" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#startSlider"
+                onDragDone="#stopSliderMusic" onDragDropped="#stopSliderMusic" onDragExited="#stopSliderMusic"
+                opacity="0.0" prefHeight="20.0" prefWidth="1000.0" style="-fx-scale-y: 6;" value="10.0"
+                GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+        <ProgressBar fx:id="pbSFX" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="1000.0"
+                     progress="0.5" GridPane.columnIndex="4" GridPane.columnSpan="3" GridPane.rowIndex="5"/>
+        <Slider fx:id="sliderSFX" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#startSlider"
+                onDragDone="#stopSliderSFX" onDragDropped="#stopSliderSFX" onDragExited="#stopSliderSFX" opacity="0.0"
+                prefHeight="20.0" prefWidth="1000.0" style="-fx-scale-y: 6;" value="50.0" GridPane.columnIndex="4"
+                GridPane.columnSpan="3" GridPane.rowIndex="5"/>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#setEmote" prefHeight="87.0"
+                prefWidth="77.0" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <graphic>
+                <ImageView fitHeight="88.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@client/scenes/Images/Icons/cool.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+            <GridPane.margin>
+                <Insets left="20.0"/>
+            </GridPane.margin>
+        </Button>
+        <ImageView fx:id="close" fitHeight="104.0" fitWidth="79.0" onMouseClicked="#setEmote" opacity="0.0"
+                   pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7">
+            <image>
+                <Image url="@client/scenes/Images/Icons/close%20(1).png"/>
+            </image>
+            <GridPane.margin>
+                <Insets left="25.0"/>
+            </GridPane.margin>
+        </ImageView>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#showAdminPanel" prefHeight="60.0"
+                prefWidth="398.0" style="-fx-font-size: 28;" text="Admin panel" GridPane.columnIndex="6"
+                GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+    </children>
+</GridPane>

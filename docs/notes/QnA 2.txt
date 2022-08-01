@@ -1,0 +1,131 @@
+Q&A
+Q: What is the behaviour of the emoji reaction in singleplayer?
+A: That’s completely up to you, it might not make sense to show emoji but it’s not a problem if they’re there
+
+Q: How many points do estimate questions give?
+A: Again, it’s up to you to come up with a good method of calculating scores
+
+Q: What is the behaviour at the end of the game? Should users be able to requeue or react to the leaderboard?
+A: After the game you see the ranking for that game and it would be nice to directly be able to join another game. The only strict requirement is a leaderboard
+
+Q: Should we store the leaderboards of previous multiplayer games?
+A: It's fine if the leaderboard is discarded after the game finishes. It's also fine to store the leaderboards. It's only required to store the rankings for singleplayer games.
+
+Q: How will get get/use the database? 
+A: How you store the questions is completely up to you, all questions will be formatted in the same way (json?) You don't receive a database, you'll receive a zip file with questions and have to import them into the database yourself
+
+Q: Do we use websockets?
+A: NO
+
+Q: In which format should the questions be presented?
+A: You should (randomly) select the order and type of questions and answers before the game starts.
+
+Q: Will the answers lock once we input a choice or can you change your answer as long as you have time left?
+A: Either way is fine, but it might be challenging to implement
+
+Q: Do you get points based on how fast you answer or how many players answer before you?
+A: It's more consistent if you get points based on time but the other option is also nice. 
+
+Q: Should there be a possibility of running multiple games in parallel?
+A: Absolutely, there doesn't need to be a complicated room system but multiple games should be able to be played at the same time
+
+Q: Can we have multiple extra jokers such that we can randomize the jokers people get?
+A: You can implement as many as you like, as long as you have the three ones mentioned by the lecturers. It would be nice to disable jokers if they don't apply to the current question
+
+Q: Is it required to include a picture with each question?
+A: The basic requirement doesn't include pictures, but it would be very nice to have them as a basic extra feature
+
+Q: * i missed this question because I was getting water, sorry *
+A: something about storing singleplayer results of all players that played on the server so that you can have an all-time singleplayer leaderboard
+
+Q: Should you have a tutorial or how-to-play section?
+A: The goal should be to make your game self-explanatory
+
+Q: Since the server shouldn't use websockets should you use long polling or just send a request every 500ms?
+A: Both are fine, this is again something you can highlight in your video
+
+Q: How much time per question?
+A: That's for you to decide. As long as you have one. Might be good to have users test what their preferred time limit is
+
+Q: are the reactions given to questions only?
+A: It should be possible to give them all the time
+
+Q: Are there any system requirements?
+A: not really
+
+Q: Will all questions be standardized and put in the database?
+A: All questions will be standardized but you'll have to put it in the database yourself
+
+Q: * i missed this question again oops *
+A: You don't necessarily have to support multiple question types, the basic mininmum is a basic comparison between three activities
+
+Q: Should the points you get for a question be calculated based on how much you have left or how much has passed?
+A: That's up to you. It's more interesting if you can punish players by using the time reduction joker, so it might be better to calculate points based on time left
+
+Q: Should it be displayed when a player drops out?
+A: Would be a nice feature
+
+Q: For the option to join a new game after another game, should you join an entirely new game or stay with the same people?
+A: The latter, you should keep your name and just return to the waiting room for the previous game so that players who disconnected can just stay in the waiting room and rejoin later
+
+Q: Can we implement a large number of jokers and have the player pick the ones they'd like to play with?
+A: That'd be a really nice feature to implement!
+
+Q: Do we use IP addresses to join games?
+A: Yes. Use Java's URL class to have players connect with a protocol and IP
+
+Q: *missed thsi one again*
+A: A hard requirement: 10 questions - leaderboard - 10 questions - final leaderboard
+
+Q: Should each group provide 20 questions and 20 appliances?
+A: Each group should provide 20 activities with their energy usages. We don't hardcode the questions but should be generated on the fly. Each activity should only be inclucded in a question only once per game
+
+Q: What should happen if someone disconnects?
+A: Nothing really, just keep them in the leaderboard. A nice feature wuold be to mark the person as disconnected
+
+Q: * someone was dumb and still doesn't get the leaderboards requirements so I'm skipping this one * 
+
+Q: Should players be able to join a waiting room by preference?
+A: There is only one waiting room. (this contradicts something he said earlier I think)
+
+Q: Can we have the leaderboard visible all the time?
+A: Is not essential. May not be too interesting, at least you should have your own score visible all the time
+
+Q: Should we display the question before opening the answers to give players time to read?
+A: No, questions and answers should show up at the same time
+
+Q: *WHY ARE PEOPL DUMB IM SORRY STOP ASKING DUMB QUESTNSN*
+
+Q: Could we modify a joker that is not suitable for a certain question to make it applicable?
+A: It's up to you (just disable it smh)
+
+Q: * missed it my brain has melted *
+A: They'll provide a backlog as well but it's up to you which one you want to use
+
+finally we're done   
+
+NICE FEATURES:
+-Be able to another game immediately after finishing one
+-Disable jokers if they're not relevant to the question
+-Pictures with questions
+-Alert when a player drops out of the game
+-Implement multiple jokers and let the players choose which one they'd like
+
+Any additional features that you took time to implement should be mentioned in the video to show what creative liberties you took
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

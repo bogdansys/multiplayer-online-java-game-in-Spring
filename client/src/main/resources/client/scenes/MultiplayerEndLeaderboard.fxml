@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0"
+          prefWidth="960.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.MultiplayerEndLeaderboardController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="75.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="200.0" prefWidth="300.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0" prefWidth="30.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="840.0" minWidth="420.0" prefWidth="630.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="20.0" prefWidth="30.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="50.0" prefWidth="175.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="140.0" minHeight="70.0" prefHeight="105.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="100.0" minHeight="50.0" prefHeight="75.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="600.0" minHeight="300.0" prefHeight="450.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="120.0" minHeight="60.0" prefHeight="90.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="45.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Label style="-fx-font-size: 55;" text="Leaderboard" textFill="#f2f9f1" GridPane.columnIndex="3"
+               GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+                <Font size="48.0"/>
+            </font>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#showMainMenu" onMousePressed="#clickSound" prefHeight="50.0"
+                prefWidth="1000.0" style="-fx-font-size: 28;" text="Back to menu" textFill="#f2f9f1"
+                GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Button>
+        <GridPane fx:id="emotesGridPane" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="emojiView0" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView1" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView2" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView3" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView4" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView5" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView6" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView7" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView8" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+                <ImageView fx:id="emojiView9" fitHeight="38.0" fitWidth="38.0" layoutX="10.0" layoutY="326.0"
+                           pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER"
+                           GridPane.valignment="CENTER"/>
+            </children>
+        </GridPane>
+        <HBox fx:id="emotesHBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+              nodeOrientation="LEFT_TO_RIGHT" spacing="5.0"
+              style="-fx-background-color: #8BC34A; -fx-background-radius: 1000;" GridPane.columnIndex="5"
+              GridPane.rowIndex="4">
+            <children>
+                <Button fx:id="pooEmote" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#usePoop" onMousePressed="#clickSound" prefHeight="10000.0"
+                        prefWidth="10000.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@client/scenes/Images/Icons/poo.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="heartEmote" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#useHeart" onMousePressed="#clickSound" prefHeight="10000.0"
+                        prefWidth="10000.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@client/scenes/Images/Icons/heart.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="angryEmote" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#useAngry" onMousePressed="#clickSound" prefHeight="10000.0"
+                        prefWidth="10000.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@client/scenes/Images/Icons/angry.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="coolEmote" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#useSunGlasses" onMousePressed="#clickSound"
+                        prefHeight="10000.0" prefWidth="10000.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@client/scenes/Images/Icons/cool.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="cryingEmote" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        mnemonicParsing="false" onAction="#useCrying" onMousePressed="#clickSound" prefHeight="10000.0"
+                        prefWidth="10000.0" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@client/scenes/Images/Icons/crying.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0"/>
+            </padding>
+        </HBox>
+        <TableView fx:id="tableView" editable="true" prefHeight="154.0" prefWidth="460.0"
+                   style="-fx-border-color: #430B0B; -fx-border-radius: 25;" GridPane.columnIndex="3"
+                   GridPane.rowIndex="3">
+            <columns>
+                <TableColumn fx:id="rankColumn" maxWidth="200.0" minWidth="70.0" prefWidth="140.0" text="Rank"/>
+                <TableColumn fx:id="nameColumn" maxWidth="400.0" minWidth="240.0" prefWidth="320.0" text="Name"/>
+                <TableColumn fx:id="scoreColumn" maxWidth="240.0" minWidth="100.0" prefWidth="170.0" text="Score"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+        <Label fx:id="playerPosition" style="-fx-font-size: 35;" GridPane.columnIndex="3" GridPane.halignment="CENTER"
+               GridPane.rowIndex="4" GridPane.valignment="CENTER"/>
+    </children>
+</GridPane>

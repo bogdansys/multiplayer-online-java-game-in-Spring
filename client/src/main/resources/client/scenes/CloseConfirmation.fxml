@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0"
+          prefWidth="400.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.CloseConfirmationController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#closeApplication" prefHeight="50.0"
+                prefWidth="100.0" style="-fx-font-size: 30;" text="Yes" GridPane.halignment="CENTER"
+                GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="30.0" left="20.0"/>
+            </GridPane.margin>
+        </Button>
+        <Label lineSpacing="2.0" prefHeight="40.0" prefWidth="380.0"
+               text="Are you sure you want to close the application?" wrapText="true" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER">
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets bottom="10.0"/>
+            </GridPane.margin>
+        </Label>
+        <Button onMousePressed="#clickSound" mnemonicParsing="false" onAction="#closePopup" prefHeight="50.0"
+                prefWidth="100.0" style="-fx-font-size: 30;" text="No" GridPane.columnIndex="1"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets bottom="30.0" right="20.0"/>
+            </GridPane.margin>
+        </Button>
+        <Label fx:id="rejoinMsg" lineSpacing="2.0" prefHeight="38.0" prefWidth="378.0"
+               text="You won't be able to rejoin your current game." wrapText="true" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER">
+            <font>
+                <Font size="16.0"/>
+            </font>
+            <GridPane.margin>
+                <Insets top="50.0"/>
+            </GridPane.margin>
+        </Label>
+    </children>
+</GridPane>

@@ -1,0 +1,26 @@
+Notes 15/03/2022 
+
+
+Buddycheck: 
+
+Give original feedback that is longer then 1 sentence 
+
+ 
+
+Project: 
+
+No more then 1 person per issue preferably 
+
+Board is unclear, assign due-date/milestone 
+
+Gitinspector 
+
+Add more Javadoc 
+
+Frontend Jarno/Evan 
+
+Backend Gijs/Bogdan/Piotr/Vic 
+
+Notetaker = Evan 
+
+Chairman = Bogdan 

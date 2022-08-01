@@ -1,0 +1,20 @@
+Notes - TA Meeting 22/3/2022
+
+Frontend-Backend Switch Feedback:
+- Update the OOPP classes and endpoints file
+
+TA Feedback:
+- Increase the test coverage (16% at the moment)
+	- Mainly controllers and endpoints on server side
+- Database Testing issue needs to be updated
+- Bogdan has an insane amount of code :) (spread it out a bit more)
+- More comments on Gitlab
+- Clean up the issues
+
+Meetings this week:
+- Wednesday (Tomorrow) 10am
+- Potentially Thursday 10am
+
+Roles this week:
+Chairman - Piotr
+Notetaker - Gijs
